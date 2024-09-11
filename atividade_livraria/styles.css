@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap');
+
+/* #region Estilização básica */
+* {
+    box-sizing: border-box;
+    font-family: 'Satisfy';
+}
+
+html {
+    background-image: url('./imgs/fundo.png');
+}
+
+h1,
+h2,
+footer {
+    text-align: center;
+    font-family: 'Playfair Display SC';
+}
+
+h2 {
+    padding-bottom: 20px;
+    border-bottom: solid thin #812525;
+}
+
+p {
+    margin: 5px 0;
+}
+
+div.produtos {
+    font-size: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+div.produto {
+    width: calc(100% - 10px);
+    padding: 20px;
+    margin: 10px 10px;
+    border-radius: 0 15px;
+    box-shadow: 0 0 10px gray;
+}
+
+div.capa {
+    border-radius: 10px;
+    text-align: center;
+}
+
+div.produtos img {
+    max-width: min(250px, 100%);
+    max-height: 266px;
+    margin-top: 15px;
+}
+
+p.isbn {
+    text-align: right;
+    font-size: 60%;
+    padding: 0;
+    margin: 0;
+}
+
+p.titulo {
+    background-color: #fefadb;
+    text-align: center;
+    border-top: dashed thin black;
+    border-bottom: dashed thin black;
+    padding: 5px;
+    margin: 0;
+}
+
+p.autor {
+    text-align: center;
+}
+
+p.apresentacao {
+    color: #515151;
+    padding: 5px;
+
+    /* Limitação de linhas */
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    line-clamp: 5;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+}
+
+p.detalhes {
+    border: solid thin #812525;
+    text-align: center;
+    margin: 0;
+}       
+
+p.detalhes a {
+    color: #812525;
+    font-size: 80%;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+}
+
+p.detalhes:hover {
+    background-color: #00000022;
+}
+
+p.preco {
+    color: white;
+    background-color: green;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 0 5px 0;
+    margin: 5px auto;
+    font-size: 120%;
+    border-radius: 15px;
+}
+
+p.preco:hover {
+    background-color: #E64771;
+}
+
+p.preco a {
+    color: white;
+    font-size: 80%;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+}
+
+p.paginas {
+    font-size: 90%;
+}
+
+p.formato {
+    font-size: 75%;
+}
+
+@media (min-width: 700px) {
+    div.produtos {
+        flex-direction: row;
+    }
+
+    div.produto {
+        width: 45%;
+    }
+}
+
+@media (min-width: 1024px) {
+    div.produtos {
+        flex-direction: row;
+    }
+
+    div.produto {
+        width: 30%;
+    }
+}
